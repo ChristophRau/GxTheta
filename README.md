@@ -5,7 +5,7 @@ Gene by Ancestry association based on PyLMM for use in identifying individual po
 ### An Example Command:
 
 ```
-python pylmmGxTheta.py -v --bfile data/snps.132k.clean.noX --kfile data/snps.132k.clean.noX.pylmm.kin --phenofile data/snps.132k.clean.noX.fake.phenos --covfile Ancestry.cov --Ancestry out.foo
+python pylmmGxTheta.py -v --bfile Experiment.bfile --kfile Experiment.K --phenofile Experiment.pheno --covfile Ancestry.cov --Ancestry out.foo
 ```
 
 The GxTheta pylmmGxTheta.py reads PLINK formated input files (BED or TPED only).  There is also an option to use "EMMA" formatted files as in regular PyLMM.  The kinship matrix file can be calculated using pylmmKinship.py which also takes PLINK or EMMA files as input.  The kinship matrix output is just a plain text file and follows the same format as that used by EMMA, so that you can use pre-computed kinship matrices from EMMA as well, or any other program for that matter.
