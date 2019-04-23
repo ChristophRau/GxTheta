@@ -311,7 +311,7 @@ for i in range(phenoNum):
     K = K_origin
     Y = IN.phenos[:, i]
     v = np.isnan(Y)
-    keep = True - v
+    keep = np.logical_xor(True, v)
     if v.sum():
         if options.verbose:
             sys.stderr.write("Cleaning the phenotype vector by removing %d individuals...\n" % (v.sum()))
@@ -417,7 +417,7 @@ for i in range(phenoNum):
 
             # Check SNPs for missing values
             if v.sum():  # v.sum() is the number of missing values
-                keeps = True - v
+                keeps = np.logical_xor(True, v)
                 xs = x[keeps, :]
                 if keeps.sum() <= 1 or xs.var() <= 1e-6:
                     #sys.stderr.write("   Missingness Problem   ")

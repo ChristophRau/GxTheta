@@ -174,7 +174,7 @@ import sys
 import os
 import numpy as np
 from scipy import linalg
-from pylmm import input, lmm
+from pylmmGxT import input, lmm
 
 if len(args) != 1:
     parser.print_help()
