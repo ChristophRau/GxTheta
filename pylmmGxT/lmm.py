@@ -91,7 +91,7 @@ def calculateKinshipIncremental(IN, numSNPs=None, computeSize=1000, center=False
 
             if missing == "MAF":
                 #calculate the mean of the values in this column that are not NaN
-                mn = snp[True - np.isnan(snp)].mean()
+                mn = snp[np.logical_xor(True, np.isnan(snp))].mean()
                 #replace all NaN values in this column with the mean
                 snp[np.isnan(snp)] = mn
 
