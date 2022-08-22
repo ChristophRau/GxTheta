@@ -81,6 +81,6 @@ if __name__ == "__main__":
     Ts, Ps = GWAS_GxE(Y=Y, snp=genes, exposure=exposure_values)
     for i in range(20):
         if i == 0:
-            print 'T-statistic\tp-value'
-        print Ts[i], Ps[i]
-    print 'First row should have very high t-statistic/significant p-value'
+            print('T-statistic\tp-value')
+        print(Ts[i], Ps[i])
+    print('First row should have very high t-statistic/significant p-value')

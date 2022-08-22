@@ -74,7 +74,7 @@ def calculateKinshipIncremental(IN, numSNPs=None, computeSize=1000, center=False
 
     # Annoying hack to get around the fact that it is expensive to determine the number of SNPs in an emma file
     if numSNPs and IN.numSNPs != -1:
-        print "numSNPs param not necessary when using plink files for input. Using numSNPs=" + str(IN.numSNPs)
+        print("numSNPs param not necessary when using plink files for input. Using numSNPs=" + str(IN.numSNPs))
     elif not numSNPs and IN.numSNPs < 0:
         raise Exception("numSNPs param is required when using EMMA files for input.")
     elif IN.numSNPs == -1:

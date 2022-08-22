@@ -50,7 +50,6 @@ def fitTwo(y,K1,K2,X0=None,wgrids=100):
 	 R = L.fit()
 	 Res.append(R)
 	 LLs.append(R[-1])
-      
 	 del K
 
       L = np.array(LLs)
