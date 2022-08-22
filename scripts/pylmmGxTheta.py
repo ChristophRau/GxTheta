@@ -368,7 +368,7 @@ for i in range(phenoNum):
             sys.stderr.write("\t heritability=%0.3f, sigma=%0.3f\n" % (L.optH, L.optSigma))
         if options.verbose and (options.kfile2):
             #sys.stderr.write("\t heritability=%0.3f, sigma=%0.3f, w=%0.3f\n" % (L.optH, L.optSigma, L.optW))
-	    sys.stderr.write("\t heritability=%0.3f, sigma=%0.3f" % (L.optH, L.optSigma))
+            sys.stderr.write("\t heritability=%0.3f, sigma=%0.3f" % (L.optH, L.optSigma))
 
     if phenoNum == 1:
         full_outFilename = outFilename
