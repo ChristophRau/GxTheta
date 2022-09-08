@@ -135,7 +135,7 @@ class plink:
     def __iter__(self):
         return self.getSNPIterator()
 
-    def next(self):
+    def __next__(self):
         if self.have_read == self.numSNPs: raise StopIteration
         self.have_read += 1
 
