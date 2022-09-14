@@ -44,11 +44,11 @@ basicGroup.add_option("--tfile", dest="tfile",
                       help="The base for a PLINK tped file")
 basicGroup.add_option("--bfile", dest="bfile",
                       help="The base for a PLINK binary ped file")
-basicGroup.add_option("--emmaSNP", dest="emmaFile", default=None,
+basicGroup.add_option("--SNPemma", dest="emmaFile", default=None,
                       help="For backwards compatibility with emma, we allow for \"EMMA\" file formats.  "
-                           "This is just a text file with individuals on the rows and snps on the columns.")
-basicGroup.add_option("--emmaNumSNPs", dest="numSNPs", type="int", default=0,
-                      help="When providing the emmaSNP file you need to specify how many snps are in the file")
+                           "This is just a text file with individuals on the columns and snps on the rows.")
+basicGroup.add_option("--NumSNPsemma", dest="numSNPs", type="int", default=0,
+                      help="When providing the SNPemma file you need to specify how many snps are in the file")
 
 basicGroup.add_option("-e", "--efile", dest="saveEig", help="Save eigendecomposition to this file.")
 basicGroup.add_option("-n", default=1000, dest="computeSize", type="int",
@@ -151,9 +151,9 @@ if options.runGxE:
     X0 = np.array([u[0] for u in X0])
     Y = IN.getPhenos(options.phenoFile)
     Y = np.array([u[0] for u in Y])
-    print X0
-    print '---------'
-    print Y
+    print (X0)
+    print ('---------')
+    print (Y)
     components_dict, K_combined = estimate_variance_components.main(Y=Y, K_G=K_G, env=X0)
 
     K_combined_outfile = '{}_K_combined.pylmm.kin'.format(outFile)
