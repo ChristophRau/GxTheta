@@ -2,11 +2,11 @@
 
 # pylmm is a python-based linear mixed-model solver with applications to GWAS
 
-# Copyright (C) 2013  Nicholas A. Furlotte (nick.furlotte@gmail.com)
+# Pylmm Copyright (C) 2013  Nicholas A. Furlotte (nick.furlotte@gmail.com).  GxT 2020  Christoph Rau (ChristophRau@gmail.com)
 
 # The program is free for academic use. Please contact Nick Furlotte
 # <nick.furlotte@gmail.com> if you are interested in using the software for
-#commercial purposes.
+# commercial purposes.
 
 #The software must not be modified and distributed without prior
 #permission of the author.
