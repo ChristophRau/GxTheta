@@ -1,26 +1,5 @@
 # pylmm is a python-based linear mixed-model solver with applications to GWAS
 
-# Copyright (C) 2014  Nicholas A. Furlotte (nick.furlotte@gmail.com)
-
-# The program is free for academic use. Please contact Nick Furlotte
-# <nick.furlotte@gmail.com> if you are interested in using the software for
-# commercial purposes.
-
-# The software must not be modified and distributed without prior
-# permission of the author.
-
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-# A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
-# CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
-# EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
-# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
-# PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-# LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-# NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
 import sys
 import time
 import numpy as np
@@ -87,7 +66,7 @@ def calculateKinshipIncremental(IN, numSNPs=None, computeSize=1000, center=False
     while i < IN.numSNPs:
         j = 0
         while j < m and i < IN.numSNPs:
-            snp,id = IN.next()
+            snp,id = IN.__next__()
 
             if missing == "MAF":
                 #calculate the mean of the values in this column that are not NaN
